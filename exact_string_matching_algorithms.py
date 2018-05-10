@@ -352,9 +352,8 @@ def choose_algorithm():
                 structure_name = 'Hash Table'
             elif (choice == 3):
                 structure_name = 'Suffix Array'
-            else:
+            elif (choice == 4):
                 structure_name = 'Suffix Tree'
-                return
 
             print('\nYou chose the ' + structure_name + ' algorithm.')
 
@@ -420,7 +419,7 @@ def create_indexes():
     global indexes
     indexes = []
     for key, value in parsed_fasta.items():
-        print('Creating ' + structure_name + ' for sequence ' + key)
+        print('Creating index for sequence ' + key)
         indexes.append(init_structure(key, value, 5))
 
 
